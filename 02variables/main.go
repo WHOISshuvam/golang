@@ -37,6 +37,6 @@ func main() {
 	numberofUsers := 300000
 	fmt.Println(numberofUsers)
 
-	fmt.Println(LoginToken)
-	fmt.Printf("Variable is of type %T \n", LoginToken)
+	fmt.Println(LoginTokens)
+	fmt.Printf("Variable is of type %T \n", LoginTokens)
 }
