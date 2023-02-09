@@ -6,16 +6,15 @@ func main() {
 
 	fmt.Println("Arrays in golang")
 
-	var friendsList [6]string
+	var friendsist [6]string
+	friendsist[0] = "Arpan"
+	friendsist[1] = "Ayush"
+	friendsist[2] = "Anish"
 
-	friendsList[0] = "Reason"
-	friendsList[1] = "Rohan"
-	friendsList[3] = "Ritesh"
+	fmt.Println("Friends list is :", friendsist)
+	fmt.Println("Friends list is :", len(friendsist)) // Out 6
 
-	fmt.Println("Friends List is :", friendsList)
-	fmt.Println("Friends List is :", len(friendsList)) // output 6
-
-	var cartoonsList = [3]string{"Ben10", "Horrid Henry", "Tom and Jerry"}
-
-	fmt.Println("Cartoons list is", len(cartoonsList))
+	var cartoonsList = [3]string{"tom and jerry", "horrid henry", "ben 10"}
+	fmt.Println("Cartoons list is:", cartoonsList)
+	fmt.Println("Cartoons list is:", len(cartoonsList)) // out 3
 }
