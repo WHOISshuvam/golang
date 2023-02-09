@@ -2,12 +2,10 @@ package main
 
 import "fmt"
 
-var jwtToken uint64 = 1200
-
-const LoginToken string = "gjhgdshf"
+const LoginToken string = "fjsdkljgkldjfkj" //Public
 
 func main() {
-	var username string = "hitesh"
+	var username string = "suvam"
 	fmt.Println(username)
 	fmt.Printf("Variable is of type: %T \n", username)
 
@@ -19,24 +17,26 @@ func main() {
 	fmt.Println(smallVal)
 	fmt.Printf("Variable is of type: %T \n", smallVal)
 
-	var smallFloat float64 = 255.5385787598375
-	fmt.Println(smallFloat)
-	fmt.Printf("Variable is of type: %T \n", smallFloat)
-	// default values and alias
+	var smallFLoat float64 = 255.3232357867866
+	fmt.Println(smallFLoat)
+	fmt.Printf("Variable is of type: %T \n", smallFLoat)
 
+	// default values and alias
 	var anotherVariable int
 	fmt.Println(anotherVariable)
-	fmt.Printf("Variable is of  type: %T \n", anotherVariable)
+	fmt.Printf("Variable is of type: %T \n", anotherVariable)
 
-	//implicit
+	var anotherString string
+	fmt.Println(anotherString)
+	fmt.Printf("Variable is of type: %T \n", anotherString)
 
-	var website = "learncodeonline.in"
+	// implicit type
+	var website = "suvam.com"
 	fmt.Println(website)
 
-	// no var style
-	numberofUsers := 300000
+	//no var style
+	numberofUsers := 30000000000.45
 	fmt.Println(numberofUsers)
-
-	fmt.Println(LoginTokens)
-	fmt.Printf("Variable is of type %T \n", LoginTokens)
+	fmt.Println(LoginToken)
+	fmt.Printf("Variable type is of type: %T \n", LoginToken)
 }

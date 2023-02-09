@@ -1,3 +1,3 @@
-module variable
+module variables
 
 go 1.19
