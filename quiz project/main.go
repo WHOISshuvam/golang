@@ -23,6 +23,7 @@ func main() {
 	}
 
 	score := 0
+	fullScore := 12
 
 	fmt.Printf("How do you see hidden character in text file in linux? ")
 	var answer string
@@ -32,9 +33,11 @@ func main() {
 
 	if answer+" "+answer2 == "cat -v" {
 		fmt.Println("Correct")
+		score += 10
 
 	} else if answer+" "+answer2 == "Cat -v" {
 		fmt.Println("Correct")
+		score += 10
 	} else {
 		fmt.Println("Incorrect!")
 	}
@@ -43,9 +46,17 @@ func main() {
 	var capital string
 	fmt.Scan(&capital)
 
-	if answer == "kathmandu" {
+	if capital == "kathmandu" {
 		fmt.Println("Correct")
+		score += 2
+	} else if capital == "Kathmandu" {
+		fmt.Println("Correct")
+		score += 2
 	} else {
 		fmt.Println("Incorrect")
 	}
+
+	fmt.Printf("You scored %v out of %v \n", score, fullScore)
+	percent := (float64(score) / float64(fullScore)) * 100
+	fmt.Printf("You scored %v%%.\n", percent)
 }
