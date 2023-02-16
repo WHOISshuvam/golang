@@ -26,4 +26,22 @@ func main() {
 		suvam++
 	}
 
+	// for i :=0 0; i < 5; i++{
+	// 	fmt.Println(i)
+	// }
+
+	name := []string{"Aaa", "Bbb", "Ccc", "Ddd", "fff"}
+
+	for index, value := range name {
+		if index == 1 {
+			fmt.Println("Continuing at pos", index)
+			continue
+		}
+		if index > 2 {
+			fmt.Println("Breaking at pos", index)
+			break
+		}
+		fmt.Printf("the value at pos %v is %v\n", index, value)
+	}
+
 }

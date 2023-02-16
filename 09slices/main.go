@@ -30,4 +30,10 @@ func main() {
 	sort.Ints(highScore)
 	fmt.Println(highScore)
 	fmt.Println(sort.IntsAreSorted(highScore)) // true
+
+	var scores = []int{100, 20}
+	scores[1] = 25
+	scores = append(scores, 78)
+
+	fmt.Println(scores, len(scores))
 }
