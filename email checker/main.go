@@ -18,7 +18,7 @@ func main() {
 	}
 
 	if err := scanner.Err(); err != nil {
-		log.Fatalf("Error cannot read from input: %v\n", err)
+		errorHandler(err)
 	}
 }
 
@@ -28,7 +28,7 @@ func checkDomain(domain string) {
 
 	mxRecords, err := net.LookupMX(domain)
 	if err != nil {
-		log.Printf("Error: %v\n", err)
+		errorHandler(err)
 	}
 	if len(mxRecords) > 0 {
 		hasMX = true
@@ -36,7 +36,7 @@ func checkDomain(domain string) {
 
 	txtRecords, err := net.LookupTXT(domain)
 	if err != nil {
-		log.Printf("Error: %v\n", err)
+		errorHandler(err)
 	}
 
 	for _, record := range txtRecords {
@@ -49,7 +49,7 @@ func checkDomain(domain string) {
 
 	dmarcRecords, err := net.LookupTXT("_dmarc." + domain)
 	if err != nil {
-		log.Printf("Error: %v\n", err)
+		errorHandler(err)
 	}
 
 	for _, record := range dmarcRecords {
@@ -61,4 +61,8 @@ func checkDomain(domain string) {
 	}
 
 	fmt.Printf("%v, %v, %v, %v, %v, %v\n", domain, hasMX, hasSPF, spfRecord, hasDMARC, dmarcRecord)
+}
+
+func errorHandler(err error) {
+	log.Printf("Error: %v\n", err)
 }
